@@ -1,10 +1,15 @@
-
 <app-intro></app-intro>
 
 <h3>Last Action: {{ lastAction }}</h3>
 
-<button kendoButton *ngIf="!windowOpen" (click)="windowOpen = true; lastAction = 'Open'" primary="true">Open Window-Dialog</button>
-
+<button
+  kendoButton
+  *ngIf="!windowOpen"
+  (click)="windowOpen = true; lastAction = 'Open'"
+  primary="true"
+>
+  Open Window-Dialog
+</button>
 
 <app-window-dialog
   #windowDialog
@@ -13,21 +18,15 @@
   minHeight="210"
   title="Kendo Window-Dialog"
   (close)="close()"
-  >
-
-  <p>
-    The quick brown fox jumps over the lazy dog!<br>
-    Is that true?
-  </p>
+>
+  <angular-image-viewer [src]="images"></angular-image-viewer>
 
   <kendo-dialog-actions>
-      <button kendoButton (click)="no()">No</button>
-      <button kendoButton (click)="yes()" primary="true">Yes</button>
+    <button kendoButton (click)="no()">No</button>
+    <button kendoButton (click)="yes()" primary="true">Yes</button>
   </kendo-dialog-actions>
-
-
 </app-window-dialog>
 
-
-
-<a class="schule" target="_blank" href="https://angular.schule">with ♡ from Angular Schule</a>
+<a class="schule" target="_blank" href="https://angular.schule"
+  >with ♡ from Angular Schule</a
+>
